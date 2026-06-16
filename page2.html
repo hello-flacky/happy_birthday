@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>Wrapped with Love</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎉</text></svg>">
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
@@ -110,6 +111,147 @@
 
         @media (max-width: 500px) {
             .title-text { font-size: 2.8rem; margin-bottom: 2rem; }
+        }
+
+        /* Mobile View Styles */
+        .mobile-view {
+            display: none;
+        }
+
+        @media (max-width: 1024px) {
+            .svg-container {
+                display: none !important;
+            }
+            .back-btn-container {
+                display: none !important;
+            }
+            .mobile-view {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                max-width: 600px;
+                margin: 0 auto;
+                padding: 0 1.5rem;
+                box-sizing: border-box;
+            }
+
+            .mobile-bouquet-container {
+                margin-top: 1rem;
+                margin-bottom: 3rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 0;
+                animation: fadeIn 1.5s ease forwards;
+            }
+
+            .mobile-bouquet {
+                width: 180px;
+                height: auto;
+                filter: drop-shadow(0 15px 30px rgba(74, 53, 37, 0.2));
+                animation: pulseBouquet 4s ease-in-out infinite alternate;
+            }
+
+            .mobile-timeline {
+                position: relative;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .mobile-timeline::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 50%;
+                width: 2px;
+                border-left: 2px dashed rgba(138, 35, 35, 0.25);
+                transform: translateX(-50%);
+                z-index: 1;
+            }
+
+            .mobile-card-wrapper {
+                position: relative;
+                width: 100%;
+                margin-bottom: 2rem;
+                z-index: 2;
+                display: flex;
+                justify-content: center;
+            }
+
+            .mobile-card {
+                background: linear-gradient(135deg, rgba(250, 243, 233, 0.95), rgba(245, 235, 222, 0.8));
+                backdrop-filter: blur(8px);
+                -webkit-backdrop-filter: blur(8px);
+                border: 1px solid rgba(138, 35, 35, 0.15);
+                border-radius: 18px;
+                padding: 1.5rem;
+                text-align: center;
+                width: 100%;
+                max-width: 450px;
+                box-sizing: border-box;
+                box-shadow: 0 10px 25px rgba(74, 53, 37, 0.12), inset 0 2px 5px rgba(255, 255, 255, 0.9);
+                font-family: 'Inter', sans-serif;
+                font-size: 1.15rem;
+                color: var(--text-brown);
+                line-height: 1.6;
+                opacity: 0;
+                transform: translateY(20px);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .mobile-card:active {
+                transform: scale(0.98);
+            }
+
+            /* Mobile Connection Dot */
+            .mobile-dot {
+                position: absolute;
+                left: 50%;
+                top: -12px;
+                transform: translateX(-50%);
+                width: 12px;
+                height: 12px;
+                background-color: #8a2323;
+                border-radius: 50%;
+                z-index: 3;
+            }
+
+            /* Sequential Animations */
+            .m1 { animation: mobileCardFadeIn 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards 0.8s; }
+            .m2 { animation: mobileCardFadeIn 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards 1.3s; }
+            .m3 { animation: mobileCardFadeIn 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards 1.8s; }
+            .m4 { animation: mobileCardFadeIn 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards 2.3s; }
+            .m5 { animation: mobileCardFadeIn 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards 2.8s; }
+            .m6 { animation: mobileCardFadeIn 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards 3.3s; }
+            .m7 { animation: mobileCardFadeIn 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards 3.8s; }
+            .m8 { animation: mobileCardFadeIn 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards 4.3s; }
+
+            .mobile-back-btn-container {
+                margin-top: 2rem;
+                margin-bottom: 3rem;
+                width: 100%;
+                max-width: 450px;
+                text-align: center;
+                opacity: 0;
+                animation: fadeIn 1.5s ease forwards 5.0s;
+                z-index: 2;
+            }
+        }
+
+        @keyframes mobileCardFadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulseBouquet {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.06); }
         }
     </style>
 </head>
@@ -234,6 +376,75 @@
 
     <div class="back-btn-container">
         <button class="btn btn-yes" onclick="window.location.href='yes.html'">Go Back</button>
+    </div>
+
+    <!-- Mobile Timeline View -->
+    <div class="mobile-view">
+        <div class="mobile-bouquet-container">
+            <img src="assets/bouquet.png" alt="Bouquet of Love" class="mobile-bouquet">
+        </div>
+
+        <div class="mobile-timeline">
+            <div class="mobile-card-wrapper">
+                <div class="mobile-dot"></div>
+                <div class="mobile-card m1">
+                    A bouquet of love,<br>sent across<br>the miles...
+                </div>
+            </div>
+
+            <div class="mobile-card-wrapper">
+                <div class="mobile-dot"></div>
+                <div class="mobile-card m2">
+                    No expectations,<br>no demands...<br>just pure love from<br>my heart to yours.
+                </div>
+            </div>
+
+            <div class="mobile-card-wrapper">
+                <div class="mobile-dot"></div>
+                <div class="mobile-card m3">
+                    Every flower<br>represents a silent<br>prayer I make for<br>your happiness.
+                </div>
+            </div>
+
+            <div class="mobile-card-wrapper">
+                <div class="mobile-dot"></div>
+                <div class="mobile-card m4">
+                    Two years of loving<br>you quietly, deeply,<br>and<br>unconditionally.
+                </div>
+            </div>
+
+            <div class="mobile-card-wrapper">
+                <div class="mobile-dot"></div>
+                <div class="mobile-card m5">
+                    Even under a<br>different sky,<br>my heart beats<br>only for you.
+                </div>
+            </div>
+
+            <div class="mobile-card-wrapper">
+                <div class="mobile-dot"></div>
+                <div class="mobile-card m6">
+                    Your smile is<br>my favorite view,<br>even from a<br>distance.
+                </div>
+            </div>
+
+            <div class="mobile-card-wrapper">
+                <div class="mobile-dot"></div>
+                <div class="mobile-card m7">
+                    Far apart in<br>distance, but always<br>close in my<br>thoughts.
+                </div>
+            </div>
+
+            <div class="mobile-card-wrapper">
+                <div class="mobile-dot"></div>
+                <div class="mobile-card m8">
+                    Loving you from<br>afar is my heart’s<br>most beautiful<br>secret.
+                </div>
+            </div>
+        </div>
+
+        <div class="mobile-back-btn-container">
+            <button class="btn btn-yes" onclick="window.location.href='yes.html'">Go Back</button>
+        </div>
     </div>
 
 </body>
