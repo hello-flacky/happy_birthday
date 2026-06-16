@@ -38,9 +38,12 @@
 
         .svg-card {
             fill: #faf3e9;
-            fill-opacity: 0.86;
+            fill-opacity: 0.95;
             stroke: rgba(138, 35, 35, 0.2);
             stroke-width: 4;
+        }
+
+        .svg-container .svg-card {
             filter: url(#cardShadow);
         }
 
@@ -136,10 +139,15 @@
 
             .svg-mobile-card-text {
                 font-family: 'Inter', sans-serif;
-                font-size: 34px;
+                font-size: 26px;
+                font-weight: 500;
                 fill: var(--text-brown);
                 text-anchor: middle;
                 dominant-baseline: middle;
+            }
+
+            .mobile-svg-container .svg-card {
+                filter: url(#mobileCardShadow);
             }
 
             .mobile-back-btn-container {
@@ -281,7 +289,7 @@
     </div>
 
     <!-- Interactive Mobile SVG Mind Map -->
-    <svg class="mobile-svg-container" viewBox="0 0 1000 3950" preserveAspectRatio="xMidYMid meet">
+    <svg class="mobile-svg-container" viewBox="0 0 1000 3650" preserveAspectRatio="xMidYMid meet">
         <defs>
             <filter id="mobileCardShadow" x="-15%" y="-15%" width="130%" height="130%">
                 <feDropShadow dx="0" dy="15" stdDeviation="12" flood-color="#4A3525" flood-opacity="0.12" />
@@ -289,108 +297,108 @@
         </defs>
 
         <!-- Central Bouquet Image -->
-        <image href="assets/bouquet.png" x="300" y="1650" width="400" height="500" style="opacity: 0.95;" />
+        <image href="assets/bouquet.png" x="350" y="1550" width="300" height="500" style="opacity: 0.95;" />
 
         <!-- 1. Top-Left Card -->
-        <path class="arrow-path a1" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" d="M500,1750 Q500,900 650,220" />
+        <path class="arrow-path a1" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" d="M500,1800 Q500,900 470,205" />
         <g class="t1 fade-group">
-            <circle class="connection-dot" cx="650" cy="220" r="14" />
-            <rect class="svg-card" x="50" y="80" width="600" height="280" rx="30" filter="url(#mobileCardShadow)" />
-            <text class="svg-mobile-card-text" x="350" y="220">
-                <tspan x="350" dy="-1.2em">A bouquet of love,</tspan>
-                <tspan x="350" dy="1.6em">sent across</tspan>
-                <tspan x="350" dy="1.6em">the miles...</tspan>
+            <circle class="connection-dot" cx="470" cy="205" r="14" />
+            <rect class="svg-card" x="50" y="80" width="420" height="250" rx="30" filter="url(#mobileCardShadow)" />
+            <text class="svg-mobile-card-text" x="260" y="205">
+                <tspan x="260" dy="-1.2em">A bouquet of love,</tspan>
+                <tspan x="260" dy="1.6em">sent across</tspan>
+                <tspan x="260" dy="1.6em">the miles...</tspan>
             </text>
         </g>
 
         <!-- 2. Top-Right Card -->
-        <path class="arrow-path a2" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" d="M500,1750 Q500,1100 350,620" />
+        <path class="arrow-path a2" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" d="M500,1800 Q500,1100 530,575" />
         <g class="t2 fade-group">
-            <circle class="connection-dot" cx="350" cy="620" r="14" />
-            <rect class="svg-card" x="350" y="480" width="600" height="280" rx="30" filter="url(#mobileCardShadow)" />
-            <text class="svg-mobile-card-text" x="650" y="620">
-                <tspan x="650" dy="-1.8em">No expectations,</tspan>
-                <tspan x="650" dy="1.6em">no demands...</tspan>
-                <tspan x="650" dy="1.6em">just pure love from</tspan>
-                <tspan x="650" dy="1.6em">my heart to yours.</tspan>
+            <circle class="connection-dot" cx="530" cy="575" r="14" />
+            <rect class="svg-card" x="530" y="450" width="420" height="250" rx="30" filter="url(#mobileCardShadow)" />
+            <text class="svg-mobile-card-text" x="740" y="575">
+                <tspan x="740" dy="-1.8em">No expectations,</tspan>
+                <tspan x="740" dy="1.6em">no demands...</tspan>
+                <tspan x="740" dy="1.6em">just pure love from</tspan>
+                <tspan x="740" dy="1.6em">my heart to yours.</tspan>
             </text>
         </g>
 
         <!-- 3. Mid-Left Card (above bouquet) -->
-        <path class="arrow-path a3" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" d="M500,1750 Q500,1300 650,1020" />
+        <path class="arrow-path a3" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" d="M500,1800 Q500,1300 470,945" />
         <g class="t3 fade-group">
-            <circle class="connection-dot" cx="650" cy="1020" r="14" />
-            <rect class="svg-card" x="50" y="880" width="600" height="280" rx="30" filter="url(#mobileCardShadow)" />
-            <text class="svg-mobile-card-text" x="350" y="1020">
-                <tspan x="350" dy="-1.8em">Every flower</tspan>
-                <tspan x="350" dy="1.6em">represents a silent</tspan>
-                <tspan x="350" dy="1.6em">prayer I make for</tspan>
-                <tspan x="350" dy="1.6em">your happiness.</tspan>
+            <circle class="connection-dot" cx="470" cy="945" r="14" />
+            <rect class="svg-card" x="50" y="820" width="420" height="250" rx="30" filter="url(#mobileCardShadow)" />
+            <text class="svg-mobile-card-text" x="260" y="945">
+                <tspan x="260" dy="-1.8em">Every flower</tspan>
+                <tspan x="260" dy="1.6em">represents a silent</tspan>
+                <tspan x="260" dy="1.6em">prayer I make for</tspan>
+                <tspan x="260" dy="1.6em">your happiness.</tspan>
             </text>
         </g>
 
         <!-- 4. Mid-Right Card (above bouquet) -->
-        <path class="arrow-path a4" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" d="M500,1750 Q500,1500 350,1420" />
+        <path class="arrow-path a4" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" d="M500,1800 Q500,1500 530,1315" />
         <g class="t4 fade-group">
-            <circle class="connection-dot" cx="350" cy="1420" r="14" />
-            <rect class="svg-card" x="350" y="1280" width="600" height="280" rx="30" filter="url(#mobileCardShadow)" />
-            <text class="svg-mobile-card-text" x="650" y="1420">
-                <tspan x="650" dy="-1.8em">Two years of loving</tspan>
-                <tspan x="650" dy="1.6em">you quietly, deeply,</tspan>
-                <tspan x="650" dy="1.6em">and</tspan>
-                <tspan x="650" dy="1.6em">unconditionally.</tspan>
+            <circle class="connection-dot" cx="530" cy="1315" r="14" />
+            <rect class="svg-card" x="530" y="1190" width="420" height="250" rx="30" filter="url(#mobileCardShadow)" />
+            <text class="svg-mobile-card-text" x="740" y="1315">
+                <tspan x="740" dy="-1.8em">Two years of loving</tspan>
+                <tspan x="740" dy="1.6em">you quietly, deeply,</tspan>
+                <tspan x="740" dy="1.6em">and</tspan>
+                <tspan x="740" dy="1.6em">unconditionally.</tspan>
             </text>
         </g>
 
         <!-- 5. Mid-Left Card (below bouquet) -->
-        <path class="arrow-path a5" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" d="M500,2050 Q500,2200 650,2380" />
+        <path class="arrow-path a5" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" d="M500,1800 Q500,2150 470,2285" />
         <g class="t5 fade-group">
-            <circle class="connection-dot" cx="650" cy="2380" r="14" />
-            <rect class="svg-card" x="50" y="2240" width="600" height="280" rx="30" filter="url(#mobileCardShadow)" />
-            <text class="svg-mobile-card-text" x="350" y="2380">
-                <tspan x="350" dy="-1.2em">Even under a</tspan>
-                <tspan x="350" dy="1.6em">different sky,</tspan>
-                <tspan x="350" dy="1.6em">my heart beats</tspan>
-                <tspan x="350" dy="1.6em">only for you.</tspan>
+            <circle class="connection-dot" cx="470" cy="2285" r="14" />
+            <rect class="svg-card" x="50" y="2160" width="420" height="250" rx="30" filter="url(#mobileCardShadow)" />
+            <text class="svg-mobile-card-text" x="260" y="2285">
+                <tspan x="260" dy="-1.2em">Even under a</tspan>
+                <tspan x="260" dy="1.6em">different sky,</tspan>
+                <tspan x="260" dy="1.6em">my heart beats</tspan>
+                <tspan x="260" dy="1.6em">only for you.</tspan>
             </text>
         </g>
 
         <!-- 6. Mid-Right Card (below bouquet) -->
-        <path class="arrow-path a6" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" d="M500,2050 Q500,2450 350,2780" />
+        <path class="arrow-path a6" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" d="M500,1800 Q500,2400 530,2655" />
         <g class="t6 fade-group">
-            <circle class="connection-dot" cx="350" cy="2780" r="14" />
-            <rect class="svg-card" x="350" y="2640" width="600" height="280" rx="30" filter="url(#mobileCardShadow)" />
-            <text class="svg-mobile-card-text" x="650" y="2780">
-                <tspan x="650" dy="-1.8em">Your smile is</tspan>
-                <tspan x="650" dy="1.6em">my favorite view,</tspan>
-                <tspan x="650" dy="1.6em">even from a</tspan>
-                <tspan x="650" dy="1.6em">distance.</tspan>
+            <circle class="connection-dot" cx="530" cy="2655" r="14" />
+            <rect class="svg-card" x="530" y="2530" width="420" height="250" rx="30" filter="url(#mobileCardShadow)" />
+            <text class="svg-mobile-card-text" x="740" y="2655">
+                <tspan x="740" dy="-1.8em">Your smile is</tspan>
+                <tspan x="740" dy="1.6em">my favorite view,</tspan>
+                <tspan x="740" dy="1.6em">even from a</tspan>
+                <tspan x="740" dy="1.6em">distance.</tspan>
             </text>
         </g>
 
         <!-- 7. Bottom-Left Card -->
-        <path class="arrow-path a7" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" d="M500,2050 Q500,2700 650,3180" />
+        <path class="arrow-path a7" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" d="M500,1800 Q500,2650 470,3025" />
         <g class="t7 fade-group">
-            <circle class="connection-dot" cx="650" cy="3180" r="14" />
-            <rect class="svg-card" x="50" y="3040" width="600" height="280" rx="30" filter="url(#mobileCardShadow)" />
-            <text class="svg-mobile-card-text" x="350" y="3180">
-                <tspan x="350" dy="-1.8em">Far apart in</tspan>
-                <tspan x="350" dy="1.6em">distance, but always</tspan>
-                <tspan x="350" dy="1.6em">close in my</tspan>
-                <tspan x="350" dy="1.6em">thoughts.</tspan>
+            <circle class="connection-dot" cx="470" cy="3025" r="14" />
+            <rect class="svg-card" x="50" y="2900" width="420" height="250" rx="30" filter="url(#mobileCardShadow)" />
+            <text class="svg-mobile-card-text" x="260" y="3025">
+                <tspan x="260" dy="-1.8em">Far apart in</tspan>
+                <tspan x="260" dy="1.6em">distance, but always</tspan>
+                <tspan x="260" dy="1.6em">close in my</tspan>
+                <tspan x="260" dy="1.6em">thoughts.</tspan>
             </text>
         </g>
 
         <!-- 8. Bottom-Right Card -->
-        <path class="arrow-path a8" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" d="M500,2050 Q500,2900 350,3580" />
+        <path class="arrow-path a8" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" d="M500,1800 Q500,2900 530,3395" />
         <g class="t8 fade-group">
-            <circle class="connection-dot" cx="350" cy="3580" r="14" />
-            <rect class="svg-card" x="350" y="3440" width="600" height="280" rx="30" filter="url(#mobileCardShadow)" />
-            <text class="svg-mobile-card-text" x="650" y="3580">
-                <tspan x="650" dy="-1.8em">Loving you from</tspan>
-                <tspan x="650" dy="1.6em">afar is my heart’s</tspan>
-                <tspan x="650" dy="1.6em">most beautiful</tspan>
-                <tspan x="650" dy="1.6em">secret.</tspan>
+            <circle class="connection-dot" cx="530" cy="3395" r="14" />
+            <rect class="svg-card" x="530" y="3270" width="420" height="250" rx="30" filter="url(#mobileCardShadow)" />
+            <text class="svg-mobile-card-text" x="740" y="3395">
+                <tspan x="740" dy="-1.8em">Loving you from</tspan>
+                <tspan x="740" dy="1.6em">afar is my heart’s</tspan>
+                <tspan x="740" dy="1.6em">most beautiful</tspan>
+                <tspan x="740" dy="1.6em">secret.</tspan>
             </text>
         </g>
     </svg>
