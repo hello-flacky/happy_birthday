@@ -338,22 +338,13 @@
     </div>
 
     <!-- Hidden Audio Player -->
-    <audio id="bg-audio" src="assets/song.MP3" preload="metadata" loop></audio>
+    <audio id="bg-audio" src="assets/song.MP3" preload="auto"></audio>
     <div class="play-hint visible" id="playHint">🎵 Tap to play song 🎵</div>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const audio = document.getElementById('bg-audio');
             const hint = document.getElementById('playHint');
-            const startTime = 88;
-
-            function seekToStartPoint() {
-                if (audio.readyState >= 1 && audio.duration > startTime + 3 && audio.currentTime < startTime) {
-                    try { audio.currentTime = startTime; } catch(e) {}
-                }
-            }
-
-            audio.addEventListener('loadedmetadata', seekToStartPoint);
 
             audio.addEventListener('playing', () => {
                 hint.classList.remove('visible');
@@ -369,7 +360,6 @@
                 if (audio.readyState === 0) {
                     audio.load();
                 }
-                seekToStartPoint();
 
                 audio.play().catch(() => {
                     hint.classList.remove('vanish-anim');
