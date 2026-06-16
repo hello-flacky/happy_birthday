@@ -338,7 +338,7 @@
     </div>
 
     <!-- Hidden Audio Player -->
-    <audio id="bg-audio" src="assets/song.mp3" preload="auto" loop></audio>
+    <audio id="bg-audio" src="assets/song.MP3" preload="auto" loop></audio>
     <div class="play-hint visible" id="playHint">🎵 Tap to play song 🎵</div>
 
     <script>
@@ -367,8 +367,7 @@
                     try { audio.currentTime = 128; } catch(e){}
                 }
                 
-                audio.play().catch(e => {
-                    console.log("Play failed: ", e);
+                audio.play().catch(() => {
                     hint.classList.remove('vanish-anim');
                 });
             });

@@ -1,0 +1,18 @@
+# Local AI/tool workspaces
+/ai/
+/.ai/
+/.codex/
+/.claude/
+/.cursor/
+/.windsurf/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.log
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -245,6 +245,9 @@ body {
   .kiss, .heart {
     font-size: 1.4rem;
   }
+  .k3 {
+    right: 0;
+  }
   .container {
     padding: 1.5rem 1rem;
   }
