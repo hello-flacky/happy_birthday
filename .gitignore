@@ -11,6 +11,7 @@
 *.temp
 *.bak
 *.log
+/WhatsApp Video *.mp4
 
 # OS/editor files
 .DS_Store
