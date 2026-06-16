@@ -38,12 +38,9 @@
 
         .svg-card {
             fill: #faf3e9;
-            fill-opacity: 0.95;
+            fill-opacity: 0.86;
             stroke: rgba(138, 35, 35, 0.2);
             stroke-width: 4;
-        }
-
-        .svg-container .svg-card {
             filter: url(#cardShadow);
         }
 
@@ -114,54 +111,6 @@
 
         @media (max-width: 500px) {
             .title-text { font-size: 2.8rem; margin-bottom: 2rem; }
-        }
-
-        /* Mobile View Styles */
-        .mobile-svg-container,
-        .mobile-back-btn-container {
-            display: none;
-        }
-
-        @media (max-width: 1024px) {
-            .svg-container {
-                display: none !important;
-            }
-            .back-btn-container {
-                display: none !important;
-            }
-            
-            .mobile-svg-container {
-                display: block;
-                width: 100%;
-                max-width: 600px;
-                margin: 0 auto;
-            }
-
-            .svg-mobile-card-text {
-                font-family: 'Inter', sans-serif;
-                font-size: 26px;
-                font-weight: 500;
-                fill: var(--text-brown);
-                text-anchor: middle;
-                dominant-baseline: middle;
-            }
-
-            .mobile-svg-container .svg-card {
-                filter: url(#mobileCardShadow);
-            }
-
-            .mobile-back-btn-container {
-                display: block;
-                margin: 2rem auto 4rem auto;
-                width: 100%;
-                max-width: 450px;
-                text-align: center;
-                opacity: 0;
-                animation: fadeIn 1.5s ease forwards 6.5s;
-                z-index: 10;
-                padding: 0 1.5rem;
-                box-sizing: border-box;
-            }
         }
     </style>
 </head>
@@ -285,125 +234,6 @@
     </svg>
 
     <div class="back-btn-container">
-        <button class="btn btn-yes" onclick="window.location.href='yes.html'">Go Back</button>
-    </div>
-
-    <!-- Interactive Mobile SVG Mind Map -->
-    <svg class="mobile-svg-container" viewBox="0 0 1000 3650" preserveAspectRatio="xMidYMid meet">
-        <defs>
-            <filter id="mobileCardShadow" x="-15%" y="-15%" width="130%" height="130%">
-                <feDropShadow dx="0" dy="15" stdDeviation="12" flood-color="#4A3525" flood-opacity="0.12" />
-            </filter>
-        </defs>
-
-        <!-- Central Bouquet Image -->
-        <image href="assets/bouquet.png" x="350" y="1550" width="300" height="500" style="opacity: 0.95;" />
-
-        <!-- 1. Top-Left Card -->
-        <path class="arrow-path a1" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" d="M500,1800 Q500,900 470,205" />
-        <g class="t1 fade-group">
-            <circle class="connection-dot" cx="470" cy="205" r="14" />
-            <rect class="svg-card" x="50" y="80" width="420" height="250" rx="30" filter="url(#mobileCardShadow)" />
-            <text class="svg-mobile-card-text" x="260" y="205">
-                <tspan x="260" dy="-1.2em">A bouquet of love,</tspan>
-                <tspan x="260" dy="1.6em">sent across</tspan>
-                <tspan x="260" dy="1.6em">the miles...</tspan>
-            </text>
-        </g>
-
-        <!-- 2. Top-Right Card -->
-        <path class="arrow-path a2" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" d="M500,1800 Q500,1100 530,575" />
-        <g class="t2 fade-group">
-            <circle class="connection-dot" cx="530" cy="575" r="14" />
-            <rect class="svg-card" x="530" y="450" width="420" height="250" rx="30" filter="url(#mobileCardShadow)" />
-            <text class="svg-mobile-card-text" x="740" y="575">
-                <tspan x="740" dy="-1.8em">No expectations,</tspan>
-                <tspan x="740" dy="1.6em">no demands...</tspan>
-                <tspan x="740" dy="1.6em">just pure love from</tspan>
-                <tspan x="740" dy="1.6em">my heart to yours.</tspan>
-            </text>
-        </g>
-
-        <!-- 3. Mid-Left Card (above bouquet) -->
-        <path class="arrow-path a3" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" d="M500,1800 Q500,1300 470,945" />
-        <g class="t3 fade-group">
-            <circle class="connection-dot" cx="470" cy="945" r="14" />
-            <rect class="svg-card" x="50" y="820" width="420" height="250" rx="30" filter="url(#mobileCardShadow)" />
-            <text class="svg-mobile-card-text" x="260" y="945">
-                <tspan x="260" dy="-1.8em">Every flower</tspan>
-                <tspan x="260" dy="1.6em">represents a silent</tspan>
-                <tspan x="260" dy="1.6em">prayer I make for</tspan>
-                <tspan x="260" dy="1.6em">your happiness.</tspan>
-            </text>
-        </g>
-
-        <!-- 4. Mid-Right Card (above bouquet) -->
-        <path class="arrow-path a4" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" d="M500,1800 Q500,1500 530,1315" />
-        <g class="t4 fade-group">
-            <circle class="connection-dot" cx="530" cy="1315" r="14" />
-            <rect class="svg-card" x="530" y="1190" width="420" height="250" rx="30" filter="url(#mobileCardShadow)" />
-            <text class="svg-mobile-card-text" x="740" y="1315">
-                <tspan x="740" dy="-1.8em">Two years of loving</tspan>
-                <tspan x="740" dy="1.6em">you quietly, deeply,</tspan>
-                <tspan x="740" dy="1.6em">and</tspan>
-                <tspan x="740" dy="1.6em">unconditionally.</tspan>
-            </text>
-        </g>
-
-        <!-- 5. Mid-Left Card (below bouquet) -->
-        <path class="arrow-path a5" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" d="M500,1800 Q500,2150 470,2285" />
-        <g class="t5 fade-group">
-            <circle class="connection-dot" cx="470" cy="2285" r="14" />
-            <rect class="svg-card" x="50" y="2160" width="420" height="250" rx="30" filter="url(#mobileCardShadow)" />
-            <text class="svg-mobile-card-text" x="260" y="2285">
-                <tspan x="260" dy="-1.2em">Even under a</tspan>
-                <tspan x="260" dy="1.6em">different sky,</tspan>
-                <tspan x="260" dy="1.6em">my heart beats</tspan>
-                <tspan x="260" dy="1.6em">only for you.</tspan>
-            </text>
-        </g>
-
-        <!-- 6. Mid-Right Card (below bouquet) -->
-        <path class="arrow-path a6" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" d="M500,1800 Q500,2400 530,2655" />
-        <g class="t6 fade-group">
-            <circle class="connection-dot" cx="530" cy="2655" r="14" />
-            <rect class="svg-card" x="530" y="2530" width="420" height="250" rx="30" filter="url(#mobileCardShadow)" />
-            <text class="svg-mobile-card-text" x="740" y="2655">
-                <tspan x="740" dy="-1.8em">Your smile is</tspan>
-                <tspan x="740" dy="1.6em">my favorite view,</tspan>
-                <tspan x="740" dy="1.6em">even from a</tspan>
-                <tspan x="740" dy="1.6em">distance.</tspan>
-            </text>
-        </g>
-
-        <!-- 7. Bottom-Left Card -->
-        <path class="arrow-path a7" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" d="M500,1800 Q500,2650 470,3025" />
-        <g class="t7 fade-group">
-            <circle class="connection-dot" cx="470" cy="3025" r="14" />
-            <rect class="svg-card" x="50" y="2900" width="420" height="250" rx="30" filter="url(#mobileCardShadow)" />
-            <text class="svg-mobile-card-text" x="260" y="3025">
-                <tspan x="260" dy="-1.8em">Far apart in</tspan>
-                <tspan x="260" dy="1.6em">distance, but always</tspan>
-                <tspan x="260" dy="1.6em">close in my</tspan>
-                <tspan x="260" dy="1.6em">thoughts.</tspan>
-            </text>
-        </g>
-
-        <!-- 8. Bottom-Right Card -->
-        <path class="arrow-path a8" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" d="M500,1800 Q500,2900 530,3395" />
-        <g class="t8 fade-group">
-            <circle class="connection-dot" cx="530" cy="3395" r="14" />
-            <rect class="svg-card" x="530" y="3270" width="420" height="250" rx="30" filter="url(#mobileCardShadow)" />
-            <text class="svg-mobile-card-text" x="740" y="3395">
-                <tspan x="740" dy="-1.8em">Loving you from</tspan>
-                <tspan x="740" dy="1.6em">afar is my heart’s</tspan>
-                <tspan x="740" dy="1.6em">most beautiful</tspan>
-                <tspan x="740" dy="1.6em">secret.</tspan>
-            </text>
-        </g>
-    </svg>
-
-    <div class="mobile-back-btn-container">
         <button class="btn btn-yes" onclick="window.location.href='yes.html'">Go Back</button>
     </div>
 
